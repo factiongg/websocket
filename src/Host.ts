@@ -57,7 +57,7 @@ export class Host implements HostInterface {
 
         if (!this.authorize(req)) {
             sock.write(
-                ["HTTP/1.1 403 Unauthorized"].join("\r\n").concat("\r\n\r\n")
+                ["HTTP/1.1 401 Unauthorized"].join("\r\n").concat("\r\n\r\n")
             );
         }
 
