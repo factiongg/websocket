@@ -5,7 +5,7 @@ execute-on-tags: &execute-on-tag
         branch:
             ignore: /.*/
 
-execute-on-tags: &execute-on-branch
+execute-on-branch: &execute-on-branch
     filters:
         branch:
             only: /.*/
@@ -33,9 +33,9 @@ workflows:
     test:
         jobs:
             - run-tests:
-                <<: *execute-on-branch
+                  <<: *execute-on-branch
 
     publish:
         jobs:
             - run-tests:
-                <<: *execute-on-tag
+                  <<: *execute-on-tag
