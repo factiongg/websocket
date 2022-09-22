@@ -33,9 +33,11 @@ workflows:
     test:
         jobs:
             - run-tests:
+                  name: Run Tests
                   <<: *execute-on-branch
 
     publish:
         jobs:
             - run-tests:
+                  name: Run Tests
                   <<: *execute-on-tag
