@@ -1,13 +1,13 @@
 execute-on-tag: &execute-on-tag
     filters:
-        tag:
+        tags:
             only: /.*/
-        branch:
+        branches:
             ignore: /.*/
 
 execute-on-branch: &execute-on-branch
     filters:
-        branch:
+        branches:
             only: /.*/
 
 # Use the latest 2.1 version of CircleCI pipeline process engine.
