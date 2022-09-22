@@ -1,4 +1,4 @@
-execute-on-tags: &execute-on-tag
+execute-on-tag: &execute-on-tag
     filters:
         tag:
             only: /.*/
