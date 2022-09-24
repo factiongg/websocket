@@ -1,16 +1,19 @@
 import Opcode from "../Opcode";
 import FrameInterface from "./FrameInterface";
 
-type FrameParameters = {
+export type FrameParameters = {
     final?: boolean;
     rsv1?: boolean;
     rsv2?: boolean;
     rsv3?: boolean;
     masked?: boolean;
     op: Opcode;
+    length?: number;
     mask?: Uint8Array;
     data?: Uint8Array;
 };
+
+// Make frame immutable.
 
 export class Frame implements FrameInterface {
     protected final: boolean;
